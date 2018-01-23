@@ -72,3 +72,5 @@ Just use curly braces to render dynamic text. e.g. `<button>{this.state.buttonTe
 - Can't handle elements inside javascript blocks. I.e. can't use map.
 - Can't use nested components.
 - Currently getting some React errors that we aren't matching up text nodes correctly. Probably just need to work on the text node parsing.
+
+This has mostly been a proof of concept, I'm not sure if there are solutions to the limitations above.
