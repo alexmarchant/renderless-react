@@ -1,4 +1,4 @@
-This library will let you build out a react component in plain html and then hook a React component up to it. No JSX or render function, just hook up your actions using `data` attributes.
+This library will let you build out a react component in plain html and then hook a React component up to it. No JSX or render function. Just hook up your event callbacks using `data` attributes, and render dynamic text using curly braces like in JSX.
 
 ReverseReactComponent takes a DOM node `container` as a prop that it uses to build out its own render function that should match the html.
 
@@ -65,4 +65,4 @@ Just use curly braces to render dynamic text. e.g. `<button>{this.state.buttonTe
 
 - Can't handle elements inside javascript blocks. I.e. can't use map.
 - Can't use nested components.
-
+- Currently getting some React errors that we aren't matching up text nodes correctly. Probably just need to work on the text node parsing.
