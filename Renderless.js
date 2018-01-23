@@ -11,8 +11,9 @@ class Renderless extends React.Component {
 
     this.root = this.props.container.children[0]
     // Save a copy of the original dom contents as our
-    // template, without this saved copy we would be parsing
-    // the output from react
+    // template. This idea breaks without a this, since
+    // we'd lose the original curly brace placeholders
+    // and such.
     this.rootClone = this.root.cloneNode(true)
   }
 
