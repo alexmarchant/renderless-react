@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reverse React Component</title>
+     <meta charset="UTF-8"> 
+  </head>
+  <body>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="../ReverseReactComponent.js"></script>
+
+    <div id="container">
+      <form data-react-on-submit="this.submit">
+        <p class="form-group">
+          <label for="firstName">First name</label>
+          <input
+            name="firstName"
+            type="text"
+            data-react-value="this.state.firstName"
+            data-react-on-change="this.inputChange"
+          />
+        </p>
+        <p class="form-group">
+          <label for="firstName">Last name</label>
+          <input
+            name="lastName"
+            type="password"
+            data-react-value="this.state.lastName"
+            data-react-on-change="this.inputChange"
+          />
+        </p>
+        <button
+          data-react-disabled="this.state.sending"
+        >
+          {this.state.sending ? 'Sending...' : 'Send'}
+        </button>
+        <p class="message">
+          {this.state.message}
+        </p>
+      </form>
+    </div>
+
+    <script src="./Form.js"></script>
+  </body>
+</html>
