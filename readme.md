@@ -1,4 +1,4 @@
-This library will let you build out your html in html without jsx and then hook a React component up to it.
+This library will let you build out a react component in plain html and then hook a React component up to it. No JSX or render function, just hook up your actions using `data` attributes.
 
 ReverseReactComponent takes a DOM node `container` as a prop that it uses to build out its own render function that should match the html.
 
