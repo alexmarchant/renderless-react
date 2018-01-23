@@ -27,7 +27,7 @@ class Renderless extends React.Component {
 
   nodeAttributes(node) {
     // Run through the attributes and make them work
-    // width react
+    // with react
     return Array.from(node.attributes)
       .reduce((accumulator, attr) => (Object.assign(
         accumulator,
@@ -38,11 +38,11 @@ class Renderless extends React.Component {
   parseAttribute(attr) {
     let name = attr.name
 
-    // Map attributes to react frienly names
+    // Map attributes to react friendly names
     if (attributeNamesMap[name]) { name = attributeNamesMap[name] }
 
-    // Save original attr no matter what to match the dom
-    // when react renders 
+    // Save original attr so that the react render
+    // matches the origin dom node
     const reactAttributes = {[name]: attr.value}
 
     // Replace data-react attributes with camelcase
