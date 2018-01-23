@@ -59,7 +59,7 @@ Note: Use `hydrate` instead of `render`. Also, pass the parent of the target you
 
 ### Attributes
 
-Attributes that start with `data-react-XXX` will be passed to react components and evaluated. Hyphens will be converted to camel case. e.g. `<button data-react-on-click="this.handleClick"></button>` will render a button with an `onClick` prop that will eval `this.handleClick`. `this` of course revers to the hydrated React component.
+Attributes that start with `data-react-XXX` will be passed to react components and evaluated. Hyphens will be converted to camel case. e.g. `<button data-react-on-click="this.handleClick"></button>` would translate to `<button onClick={this.handleClick}></button>` in JSX.  `this`, as expected, refers to the hydrated React component.
 
 Note: as in normal React you'll likely need to bind event handlers in the `constructor`.
 
