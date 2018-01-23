@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reverse React Component</title>
+     <meta charset="UTF-8"> 
+  </head>
+  <body>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="../ReverseReactComponent.js"></script>
+
+    <div id="container">
+      <div>
+        <p>Count: {this.state.count}</p>
+        <p>
+          <button data-react-on-click="this.add">
+            Add
+          </button>
+          <button data-react-on-click="this.clear">
+            Clear
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <script src="./Counter.js"></script>
+  </body>
+</html>
