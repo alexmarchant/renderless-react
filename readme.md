@@ -49,7 +49,7 @@ const element = React.createElement(Counter, {container: container})
 ReactDOM.hydrate(element, container)
 ```
 
-Note: Use `hydrate` instead of `render`. Also, pass the parent of the target you'd like to bind to you React component as `container`.
+Note: Use `hydrate` instead of `render`. Also, pass the parent of the target you'd like to bind to your React component as `container`.
 
 ### Attributes
 
