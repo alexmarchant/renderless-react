@@ -12,12 +12,8 @@ The following example will render two buttons, `Add` increments and `Clear` clea
   <div>
     <p>Count: {this.state.count}</p>
     <p>
-      <button data-react-on-click="this.add">
-        Add
-      </button>
-      <button data-react-on-click="this.clear">
-        Clear
-      </button>
+      <button data-react-on-click="this.add">Add</button>
+      <button data-react-on-click="this.clear">Clear</button>
     </p>
   </div>
 </div>
