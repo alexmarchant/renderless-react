@@ -8,16 +8,18 @@ The following example will render two buttons, `Add` increments and `Clear` clea
 
 ```html
 <!-- Counter.html -->
-<div>
-  <p>Count: {this.state.count}</p>
-  <p>
-    <button data-react-on-click="this.add">
-      Add
-    </button>
-    <button data-react-on-click="this.clear">
-      Clear
-    </button>
-  </p>
+<div id="container">
+  <div>
+    <p>Count: {this.state.count}</p>
+    <p>
+      <button data-react-on-click="this.add">
+        Add
+      </button>
+      <button data-react-on-click="this.clear">
+        Clear
+      </button>
+    </p>
+  </div>
 </div>
 ```
 
