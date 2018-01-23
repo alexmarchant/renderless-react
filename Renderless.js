@@ -5,7 +5,7 @@ const attributeNamesMap = {
   'for': 'htmlFor',
 }
 
-class ReverseReactComponent extends React.Component {
+class Renderless extends React.Component {
   constructor(props) {
     super(props)
 

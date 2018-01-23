@@ -1,6 +1,6 @@
-The ReverseReactComponent will let you build plain html and then hook a React component up to it. No JSX or render function. Just hook up your event callbacks using `data` attributes, and render dynamic text using curly braces like in JSX.
+The Renderless component will let you build plain html and then hook a React component up to it. No JSX or render function. Just hook up your event callbacks using `data` attributes, and render dynamic text using curly braces like in JSX.
 
-ReverseReactComponent takes a DOM node `container` as a prop that it uses to build out its own render function that should match the html.
+Renderless takes a DOM node `container` as a prop that it uses to build out its own render function that should match the html.
 
 ### Example
 
@@ -21,7 +21,7 @@ Open `examples/Counter.html` in a browser to see this working. (no webpack or an
 ```
 
 ```js
-class Counter extends ReverseReactComponent {
+class Counter extends Renderless {
   constructor(props) {
     super(props)
 

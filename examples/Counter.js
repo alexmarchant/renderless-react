@@ -1,4 +1,4 @@
-class Counter extends ReverseReactComponent {
+class Counter extends Renderless {
   constructor(props) {
     super(props)
 

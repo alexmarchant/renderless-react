@@ -1,4 +1,4 @@
-class Form extends ReverseReactComponent {
+class Form extends Renderless {
   constructor(props) {
     super(props)
 
