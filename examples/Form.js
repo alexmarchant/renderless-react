@@ -5,8 +5,8 @@ class Form extends Renderless {
     this.defaultMessage = 'This is a fake form, its not making any network calls.'
 
     this.state = {
-      username: '',
-      password: '',
+      first: '',
+      second: '',
       sending: false,
       message: this.defaultMessage,
     }
@@ -23,14 +23,18 @@ class Form extends Renderless {
 
   submit(event) {
     event.preventDefault()
+
     this.setState({
       sending: true,
       message: this.defaultMessage,
     })
+
     setTimeout(() => {
       this.setState({
         sending: false,
         message: 'Form sent successfully!',
+        first: '',
+        second: '',
       })
     }, 1500)
   }
