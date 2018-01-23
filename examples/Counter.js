@@ -2,9 +2,7 @@ class Counter extends Renderless {
   constructor(props) {
     super(props)
 
-    this.state = {
-      count: 0,
-    }
+    this.state = {count: 0}
 
     this.add = this.add.bind(this)
     this.clear = this.clear.bind(this)
