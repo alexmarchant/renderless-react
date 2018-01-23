@@ -6,6 +6,7 @@ ReverseReactComponent reads the DOM and builds out its own tree of React element
 
 The following example will render two buttons, `Add` increments and `Clear` clears `this.state.count`. That count is dynamicly reflected above the buttons in `Count: {this.state.count}`. Open `examples/Counter.html` in a browser to see this working (no webpack or anything needed, React loads from a CDN).
 
+Counter.html
 ```html
 <div>
   <p>Count: {this.state.count}</p>
@@ -19,7 +20,7 @@ The following example will render two buttons, `Add` increments and `Clear` clea
   </p>
 </div>
 ```
-
+Counter.js
 ```js
 class Counter extends ReverseReactComponent {
   constructor(props) {
