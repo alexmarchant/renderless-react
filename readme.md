@@ -1,6 +1,6 @@
 The ReverseReactComponent will let you build plain html and then hook a React component up to it. No JSX or render function. Just hook up your event callbacks like `onClick` using `data` attributes, and render dynamic text using curly braces `{}` like in JSX.
 
-ReverseReactComponent reads the DOM and builds out its own tree of React elements to match what it sees.
+ReverseReactComponent reads the DOM and builds out its own tree of React elements to match what it sees. Kinda like server rendering.
 
 ### Example
 
