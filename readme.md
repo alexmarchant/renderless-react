@@ -1,4 +1,4 @@
-This library will let you build out a react component in plain html and then hook a React component up to it. No JSX or render function. Just hook up your event callbacks using `data` attributes, and render dynamic text using curly braces like in JSX.
+The ReverseReactComponent will let you build plain html and then hook a React component up to it. No JSX or render function. Just hook up your event callbacks using `data` attributes, and render dynamic text using curly braces like in JSX.
 
 ReverseReactComponent takes a DOM node `container` as a prop that it uses to build out its own render function that should match the html.
 
