@@ -1,26 +1,30 @@
-The Renderless component will let you build plain html and then hook a React component up to it. No JSX or render function. Just hook up your event callbacks using `data` attributes, and render dynamic text using curly braces like in JSX.
+The Renderless component will let you build plain html and then hook a React component up to it. No JSX or render function. Just hook up your event callbacks like `onClick` using `data` attributes, and render dynamic text using curly braces `{}` like in JSX.
 
-Renderless takes a DOM node `container` as a prop that it uses to build out its own render function that should match the html.
+Renderless reads the DOM and builds out its own tree of React elements to match what it sees. Kinda like server rendering.
 
 ### Example
 
-Open `examples/Counter.html` in a browser to see this working. (no webpack or anything needed, React loads from a CDN)
+The following example will render two buttons, `Add` increments and `Clear` clears `this.state.count`. That count is dynamicly reflected above the buttons in `Count: {this.state.count}`. Open `examples/Counter.html` in a browser to see this working (no webpack or anything needed, React loads from a CDN).
 
 ```html
-<div>
-  <p>Count: {this.state.count}</p>
-  <p>
-    <button data-react-on-click="this.add">
-      Add
-    </button>
-    <button data-react-on-click="this.clear">
-      Clear
-    </button>
-  </p>
+<!-- Counter.html -->
+<div id="container">
+  <div>
+    <p>Count: {this.state.count}</p>
+    <p>
+      <button data-react-on-click="this.add">
+        Add
+      </button>
+      <button data-react-on-click="this.clear">
+        Clear
+      </button>
+    </p>
+  </div>
 </div>
 ```
 
 ```js
+// Counter.js
 class Counter extends Renderless {
   constructor(props) {
     super(props)
@@ -43,7 +47,7 @@ class Counter extends Renderless {
 }
 ```
 
-**Render Code**
+**Code to render the component**
 
 ```js
 const container = document.getElementById('container')
@@ -51,9 +55,11 @@ const element = React.createElement(Counter, {container: container})
 ReactDOM.hydrate(element, container)
 ```
 
+Note: Use `hydrate` instead of `render`. Also, pass the parent of the target you'd like to bind to you React component as `container`.
+
 ### Attributes
 
-Attributes that start with `data-react-XXX` will be passed to react components and evaluated. Hyphens will be converted to camel case. e.g. `<button data-react-on-click="this.handleClick"></button>` will render a button with an `onClick` prop that will eval `this.handleClick`. `this` of course revers to the bound main component.
+Attributes that start with `data-react-XXX` will be passed to react components and evaluated. Hyphens will be converted to camel case. e.g. `<button data-react-on-click="this.handleClick"></button>` will render a button with an `onClick` prop that will eval `this.handleClick`. `this` of course revers to the hydrated React component.
 
 Note: as in normal React you'll likely need to bind event handlers in the `constructor`.
 
