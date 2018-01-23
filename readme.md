@@ -4,7 +4,7 @@ ReverseReactComponent takes a DOM node `container` as a prop that it uses to bui
 
 ### Example
 
-Open `examples/Counter.html` in a browser to see this working. (no webpack or anything needed, React loads from a CDN)
+The following example will render two buttons, one increments and one clears `this.state.count`. That count is dynamicly reflected above the buttons. Open `examples/Counter.html` in a browser to see this working (no webpack or anything needed, React loads from a CDN).
 
 ```html
 <div>
@@ -43,13 +43,15 @@ class Counter extends ReverseReactComponent {
 }
 ```
 
-**Render Code**
+**Code to render the component**
 
 ```js
 const container = document.getElementById('container')
 const element = React.createElement(Counter, {container: container})
 ReactDOM.hydrate(element, container)
 ```
+
+Note: Use `hydrate` instead of `render`. Also, pass the parent of the target you'd like to bind to you React component as `container`.
 
 ### Attributes
 
